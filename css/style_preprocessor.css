@@ -44,6 +44,9 @@ header .container .logo a {
 .nav_content li a:hover {
   color: #40A3F8;
   opacity: 100%;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 .nav_content li:last-of-type a {
   padding: 14px 37px;
