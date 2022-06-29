@@ -29,6 +29,7 @@ header .container .logo a {
 .nav_content {
   display: flex;
   list-style: none;
+  align-items: center;
 }
 .nav_content li a {
   font-family: "Poppins", sans-serif;
@@ -41,6 +42,7 @@ header .container .logo a {
   margin-left: 51px;
   opacity: 30%;
   transition: 0.3s;
+  display: inline-block;
 }
 .nav_content li a:hover {
   color: #40A3F8;
