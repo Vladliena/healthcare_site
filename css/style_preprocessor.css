@@ -40,6 +40,7 @@ header .container .logo a {
   justify-content: space-between;
   margin-left: 51px;
   opacity: 30%;
+  transition: 0.3s;
 }
 .nav_content li a:hover {
   color: #40A3F8;
@@ -55,6 +56,7 @@ header .container .logo a {
   color: #FFFFFF;
   opacity: inherit;
   margin-left: 46px;
+  transition: 0.3s;
 }
 .nav_content li:last-of-type a:hover {
   -webkit-transform: scale(1.1);

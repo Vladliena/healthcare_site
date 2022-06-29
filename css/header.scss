@@ -44,11 +44,12 @@ header {
       justify-content: space-between;
       margin-left: 51px;
       opacity: 30%;
+      transition: 0.3s;
 
       &:hover {
         color: #40A3F8;
         opacity: 100%;
-        @include transform(scale(1.1))
+        @include transform(scale(1.1));
       }
     }
   }
@@ -62,6 +63,7 @@ header {
         color: #FFFFFF;
         opacity: inherit;
         margin-left: 46px;
+        transition: 0.3s;
         &:hover{
           @include transform(scale(1.1))
         }
