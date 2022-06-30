@@ -350,6 +350,24 @@ $font-family: Arial, sans-serif;
         width: 270px;
         top: 275px;
         left: -40px;
+        .love{
+          position: absolute;
+          display: block;
+          left: 90px;
+          bottom: 140px;
+          animation: jump 1.2s infinite;
+          @keyframes jump {
+            0% {
+              transform: scale(0.90, 0.90);
+            }
+            50% {
+              transform: scale(1, 1);
+            }
+            100% {
+              transform: scale(0.90, 0.90);
+            }
+          }
+        }
       }
 
       .khalid {
@@ -378,6 +396,15 @@ $font-family: Arial, sans-serif;
           position: relative;
           top: -7px;
           left: -50px;
+        }
+        &::after{
+          content: url("../images/Star.png");
+          display: block;
+          width: 10px;
+          height: 10px;
+          position: relative;
+          top: -27px;
+          left: 170px;
         }
       }
     }

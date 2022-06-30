@@ -372,6 +372,24 @@ header .container .logo a {
   top: 275px;
   left: -40px;
 }
+.about_banner .container .doctor_photo .Khalid_review .love {
+  position: absolute;
+  display: block;
+  left: 90px;
+  bottom: 140px;
+  animation: jump 1.2s infinite;
+}
+@keyframes jump {
+  0% {
+    transform: scale(0.9, 0.9);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0.9, 0.9);
+  }
+}
 .about_banner .container .doctor_photo .khalid h4 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -395,6 +413,15 @@ header .container .logo a {
   position: relative;
   top: -7px;
   left: -50px;
+}
+.about_banner .container .doctor_photo .khalid::after {
+  content: url("../images/Star.png");
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  top: -27px;
+  left: 170px;
 }
 .about_banner .container .khalid_list {
   display: flex;
