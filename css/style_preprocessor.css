@@ -8,6 +8,7 @@
 header {
   padding: 28px 0 18px;
   width: 100%;
+  position: absolute;
 }
 header .container {
   max-width: 1170px;
@@ -64,6 +65,428 @@ header .container .logo a {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.main_banner {
+  padding: 200px 0 0;
+  background-size: cover;
+  background-image: url("../images/background-1.jpg");
+  background-repeat: no-repeat;
+}
+.main_banner .container {
+  max-width: 1170px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+}
+.main_banner .container .main_text {
+  max-width: 570px;
+}
+.main_banner .container .main_text H1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 70px;
+  margin-bottom: 31px;
+}
+.main_banner .container .main_text H1 span:first-of-type {
+  color: #3E3E3E;
+}
+.main_banner .container .main_text H1 span:last-of-type {
+  color: #40A3F8;
+}
+.main_banner .container .main_text p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: rgba(117, 117, 117, 0.46);
+  margin-bottom: 50px;
+}
+.main_banner .container .main_text .searcher {
+  padding: 13px 13px 14px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.main_banner .container .main_text .searcher input {
+  border-radius: 8px;
+  background-color: rgba(245, 246, 250, 0.52);
+  max-width: 216px;
+  padding: 18px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.3);
+}
+.main_banner .container .main_text .searcher .city_list {
+  border-radius: 8px;
+  background-color: rgba(245, 246, 250, 0.52);
+  padding: 18px 20px 18px 27px;
+  margin-bottom: inherit;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: black;
+}
+.main_banner .container .main_text .searcher .city_list::before {
+  content: "";
+  background-image: url("../images/Location.svg");
+  height: 17px;
+  width: 15px;
+  display: inline-block;
+  margin-right: 9px;
+}
+.main_banner .container .main_text .searcher .city_list::after {
+  content: "\f078";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 15px;
+  color: black;
+  margin-left: 7px;
+}
+.main_banner .container .main_text .searcher a {
+  background-color: #40A3F8;
+  padding: 12px 19px 10px 18px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.main_photo {
+  display: flex;
+}
+.main_photo .girl {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  max-width: 690px;
+  z-index: 2;
+}
+.main_photo .girl image {
+  display: block;
+  width: 100%;
+}
+.main_photo .blue_circules {
+  position: absolute;
+  top: 190px;
+  right: 100px;
+  max-width: 690px;
+  z-index: 1;
+}
+.main_photo .blue_circules image {
+  display: block;
+  width: 100%;
+}
+
+.main_icon1 {
+  z-index: 3;
+  position: absolute;
+  bottom: 360px;
+  right: 580px;
+  animation: jump 1.2s infinite;
+}
+@keyframes jump {
+  0% {
+    transform: scale(0.9, 0.9);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0.9, 0.9);
+  }
+}
+.main_icon1 image {
+  display: block;
+}
+
+.main_icon2 {
+  z-index: 4;
+  position: absolute;
+  bottom: 370px;
+  right: 100px;
+  animation: jump 1.2s infinite;
+}
+@keyframes jump {
+  0% {
+    transform: scale(0.9, 0.9);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0.9, 0.9);
+  }
+}
+.main_icon2 image {
+  display: block;
+}
+
+.main_icon3 {
+  z-index: 5;
+  position: absolute;
+  bottom: 150px;
+  right: 630px;
+  animation: jump 1.2s infinite;
+}
+@keyframes jump {
+  0% {
+    transform: scale(0.9, 0.9);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0.9, 0.9);
+  }
+}
+.main_icon3 image {
+  display: block;
+}
+
+.main_icon4 {
+  z-index: 6;
+  position: absolute;
+  bottom: -50px;
+  right: 480px;
+}
+.main_icon4 image {
+  display: block;
+}
+
+.main_icon5 {
+  padding: 6px 26px 10px 26px;
+  background-color: rgba(253, 254, 254, 0.9);
+  border-radius: 8px;
+  z-index: 7;
+  position: absolute;
+  text-align: center;
+  bottom: 70px;
+  right: 80px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: rgba(61, 61, 63, 0.9);
+}
+.main_icon5::before {
+  content: "";
+  background-image: url("../images/heart-3260437-2725130 1.png");
+  display: block;
+  width: 46px;
+  height: 44px;
+  margin: auto;
+}
+.main_icon5::after {
+  content: "Happy Patients";
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(61, 61, 63, 0.56);
+  display: block;
+  text-align: center;
+}
+
+.solutions_banner {
+  padding: 75px 0 75px;
+  background-color: #FFFFFF;
+  background-size: cover;
+  text-align: center;
+}
+.solutions_banner h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 70px;
+  color: #3E3E3E;
+  margin-bottom: 50px;
+}
+.solutions_banner .container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1170px;
+  margin: auto;
+}
+.solutions_banner .container .steps {
+  max-width: 320px;
+  text-align: center;
+}
+.solutions_banner .container .steps h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: #3D3D3F;
+  margin-bottom: 21px;
+}
+.solutions_banner .container .steps p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.about_banner {
+  padding: 75px 0 143px;
+  background-color: #FFFFFF;
+  background-size: cover;
+}
+.about_banner .container {
+  max-width: 1170px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+}
+.about_banner .container .doctor_photo {
+  max-width: 550px;
+  position: relative;
+}
+.about_banner .container .doctor_photo .portrait {
+  display: block;
+  width: 100%;
+}
+.about_banner .container .doctor_photo .bubble1 {
+  position: absolute;
+  display: block;
+  width: 230px;
+  top: 140px;
+  right: -25px;
+}
+.about_banner .container .doctor_photo .Khalid_review {
+  padding: 20px 26px 10px 36px;
+  background-color: #FEFEFE;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 8px;
+  position: absolute;
+  display: block;
+  width: 270px;
+  top: 275px;
+  left: -40px;
+}
+.about_banner .container .doctor_photo .khalid h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: #3D3D3F;
+}
+.about_banner .container .doctor_photo .khalid p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(61, 61, 63, 0.4);
+  margin-bottom: 9px;
+}
+.about_banner .container .doctor_photo .khalid::before {
+  content: url("../images/khalid.png");
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  top: -7px;
+  left: -50px;
+}
+.about_banner .container .khalid_list {
+  display: flex;
+  margin: auto;
+  max-width: 230px;
+  justify-content: space-between;
+}
+.about_banner .container h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #A0A2B3;
+}
+.about_banner .container p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #3D3D3F;
+}
+.about_banner .container .hospital_name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 32px;
+  color: #A0A2B3;
+  margin-bottom: 11px;
+}
+.about_banner .about_text {
+  max-width: 510px;
+  text-align: left;
+}
+.about_banner .about_text h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 49px;
+  letter-spacing: 0.02em;
+  color: #3D3D3F;
+  margin-bottom: 36px;
+}
+.about_banner .about_text p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: rgba(61, 61, 63, 0.7);
+  margin-bottom: 17px;
+}
+.about_banner .about_text ul {
+  list-style: none;
+}
+.about_banner .about_text ul li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #3D3D3F;
+  display: flex;
+  margin-bottom: 24px;
+}
+.about_banner .about_text ul li::before {
+  content: "";
+  background-image: url("../images/check-circle-filled.svg");
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin-right: 17px;
+  top: 5px;
+  position: relative;
+}
+.about_banner .about_text .explore {
+  padding: 12px 18px 12px 18px;
+  background-color: #40A3F8;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+.about_banner .about_text .explore::after {
+  content: "";
+  background-image: url("../images/arrow.svg");
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 11px;
+  background-repeat: no-repeat;
+  left: 5px;
 }
 
 /*# sourceMappingURL=style_preprocessor.css.map */
