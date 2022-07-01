@@ -1,3 +1,6 @@
+@import "normalize.css";
+@import "owl.carousel.min.css";
+@import "owl.theme.default.min.css";
 @import "https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Rubik:wght@500&family=Ubuntu&display=swap";
 * {
   padding: 0;
