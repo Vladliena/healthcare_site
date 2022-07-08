@@ -6,17 +6,62 @@
 
 @import "header";
 @import "normalize.css";
-@import "owl.carousel.min.css";
-@import "owl.theme.default.min.css";
+@import "owl.carousel.css";
+@import "owl.theme.default.css";
 @import "https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Rubik:wght@500&family=Ubuntu&display=swap";
 
-$font-family: Arial, sans-serif;
+$Poppins_font: "Poppins", sans-serif;
+$Roboto_font: "Roboto", sans-serif;
+$H_color: #3D3D3F;
+$p_color: rgba(153, 153, 153, 1);
+
+
 
 @mixin transform($property) {
   -webkit-transform: $property;
   -ms-transform: $property;
   transform: $property;
 }
+
+@mixin main_background {
+  padding: 75px 0 75px;
+  background-color: rgba(205, 233, 255, 0.11);
+  background-size: cover;
+}
+
+@mixin banner_h2 {
+  font-family: $Roboto_font;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 70px;
+  color: #3E3E3E;
+  margin-bottom: 50px;
+}
+
+@mixin banner_p {
+  font-family: $Roboto_font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: rgba(61, 61, 63, 0.7);
+  margin-bottom: 79px;
+}
+
+@mixin button {
+  padding: 12px 18px 12px 18px;
+  background-color: #40A3F8;
+  border-radius: 5px;
+  font-family: $Roboto_font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/*main_baner*/
+
 
 .main_banner {
   padding: 200px 0 0;
@@ -35,7 +80,7 @@ $font-family: Arial, sans-serif;
       max-width: 570px;
 
       H1 {
-        font-family: 'Roboto', sans-serif;
+        font-family: $Roboto_font;
         font-weight: 700;
         font-size: 48px;
         line-height: 70px;
@@ -53,7 +98,7 @@ $font-family: Arial, sans-serif;
       }
 
       p {
-        font-family: 'Roboto', sans-serif;
+        font-family: $Roboto_font;
         font-weight: 400;
         font-size: 14px;
         line-height: 30px;
@@ -74,23 +119,30 @@ $font-family: Arial, sans-serif;
           max-width: 216px;
           padding: 18px;
           border: none;
-          font-family: "Poppins", sans-serif;
+          font-family: $Poppins_font;
           font-weight: 400;
           font-size: 14px;
           line-height: 24px;
           color: rgba(0, 0, 0, 0.3);
         }
 
-        .city_list {
+        fieldset {
+          border: 0;
+          padding: inherit;
+        }
+
+        .ui-button {
           border-radius: 8px;
           background-color: rgba(245, 246, 250, 0.52);
           padding: 18px 20px 18px 27px;
           margin-bottom: inherit;
-          font-family: "Poppins", sans-serif;
+          font-family: $Poppins_font;
           font-weight: 400;
           font-size: 14px;
           line-height: 24px;
           color: black;
+          display: flex;
+          border: none;
 
           &::before {
             content: '';
@@ -109,173 +161,195 @@ $font-family: Arial, sans-serif;
             color: black;
             margin-left: 7px;
           }
+
+          &:hover {
+            background: rgba(128, 128, 128, 0.23);
+          }
         }
 
-        a {
-          background-color: #40A3F8;
-          padding: 12px 19px 10px 18px;
-          border-radius: 8px;
-          display: inline-block;
+        .ui-icon, .ui-widget-content .ui-icon {
+          background: inherit;
         }
+
+        .ui-button .ui-icon {
+          background-image: inherit;
+        }
+
+        .ui-icon {
+          width: 0;
+
+        }
+
+        .ui-icon-triangle-1-s {
+          background-position: inherit;
+        }
+
+        .ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-button:hover .ui-icon, .ui-button:focus .ui-icon {
+          background-image: inherit;
+        }
+
+        .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus {
+          border: none;
+        }
+
+        .ui-selectmenu-text {
+          margin-right: inherit;
+          overflow: inherit;
+        }
+
+        .ui-button::before {
+          margin-right: 9px;
+        }
+      }
+
+      a {
+        background-color: #40A3F8;
+        padding: 12px 19px 10px 18px;
+        border-radius: 8px;
+        display: inline-block;
+      }
+    }
+  }
+
+  .main_photo {
+    max-width: 590px;
+    position: relative;
+    display: flex;
+
+    .blue_circules {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      width: 590px;
+      height: 590px;
+      right: -75px;
+      bottom: 97px;
+    }
+
+    .girl_photo {
+      display: block;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .main_icon1 {
+      z-index: 3;
+      position: absolute;
+      bottom: 500px;
+      left: -70px;
+      display: block;
+      animation: jump 1.2s infinite;
+      @keyframes jump {
+        0% {
+          transform: scale(0.90, 0.90);
+        }
+        50% {
+          transform: scale(1, 1);
+        }
+        100% {
+          transform: scale(0.90, 0.90);
+        }
+      }
+    }
+
+    .main_icon2 {
+      z-index: 4;
+      position: absolute;
+      display: block;
+      bottom: 530px;
+      right: -50px;
+      animation: jump 1.2s infinite;
+      @keyframes jump {
+        0% {
+          transform: scale(0.90, 0.90);
+        }
+        50% {
+          transform: scale(1, 1);
+        }
+        100% {
+          transform: scale(0.90, 0.90);
+        }
+      }
+    }
+
+    .main_icon3 {
+      z-index: 5;
+      position: absolute;
+      display: block;
+      bottom: 280px;
+      left: -120px;
+      animation: jump 1.2s infinite;
+      @keyframes jump {
+        0% {
+          transform: scale(0.90, 0.90);
+        }
+        50% {
+          transform: scale(1, 1);
+        }
+        100% {
+          transform: scale(0.90, 0.90);
+        }
+      }
+    }
+
+    .main_icon4 {
+      z-index: 6;
+      position: absolute;
+      bottom: 60px;
+      left: -125px;
+      display: block;
+    }
+
+    .main_icon5 {
+      padding: 6px 26px 10px 26px;
+      background-color: rgba(253, 254, 254, 0.9);
+      border-radius: 8px;
+      z-index: 7;
+      position: absolute;
+      text-align: center;
+      bottom: 175px;
+      right: -85px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+      color: rgba(61, 61, 63, 0.9);
+
+      &::before {
+        content: '';
+        background-image: url("../images/heart-3260437-2725130 1.png");
+        display: block;
+        width: 46px;
+        height: 44px;
+        margin: auto;
+      }
+
+      &::after {
+        content: "Happy Patients";
+        font-family: $Poppins_font;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: rgba(61, 61, 63, 0.56);
+        display: block;
+        text-align: center;
       }
     }
   }
 }
 
-.main_photo {
-  display: flex;
 
-  .girl {
-    position: relative;
-    bottom: 0;
-    right: 0;
-    max-width: 690px;
-    z-index: 2;
+/*solution_banner*/
 
-    image {
-      display: block;
-      width: 100%;
-    }
-  }
-
-  .blue_circules {
-    position: absolute;
-    top: 190px;
-    right: 100px;
-    max-width: 690px;
-    z-index: 1;
-
-    image {
-      display: block;
-      width: 100%;
-    }
-  }
-}
-
-.main_icon1 {
-  z-index: 3;
-  position: absolute;
-  bottom: 360px;
-  right: 580px;
-  animation: jump 1.2s infinite;
-  @keyframes jump {
-    0% {
-      transform: scale(0.90, 0.90);
-    }
-    50% {
-      transform: scale(1, 1);
-    }
-    100% {
-      transform: scale(0.90, 0.90);
-    }
-  }
-
-  image {
-    display: block;
-  }
-}
-
-.main_icon2 {
-  z-index: 4;
-  position: absolute;
-  bottom: 370px;
-  right: 100px;
-  animation: jump 1.2s infinite;
-  @keyframes jump {
-    0% {
-      transform: scale(0.90, 0.90);
-    }
-    50% {
-      transform: scale(1, 1);
-    }
-    100% {
-      transform: scale(0.90, 0.90);
-    }
-  }
-
-  image {
-    display: block;
-  }
-}
-
-.main_icon3 {
-  z-index: 5;
-  position: absolute;
-  bottom: 150px;
-  right: 630px;
-  animation: jump 1.2s infinite;
-  @keyframes jump {
-    0% {
-      transform: scale(0.90, 0.90);
-    }
-    50% {
-      transform: scale(1, 1);
-    }
-    100% {
-      transform: scale(0.90, 0.90);
-    }
-  }
-
-  image {
-    display: block;
-  }
-}
-
-.main_icon4 {
-  z-index: 6;
-  position: absolute;
-  bottom: -50px;
-  right: 480px;
-
-  image {
-    display: block;
-  }
-}
-
-.main_icon5 {
-  padding: 6px 26px 10px 26px;
-  background-color: rgba(253, 254, 254, 0.9);
-  border-radius: 8px;
-  z-index: 7;
-  position: absolute;
-  text-align: center;
-  bottom: 70px;
-  right: 80px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 36px;
-  color: rgba(61, 61, 63, 0.9);
-
-  &::before {
-    content: '';
-    background-image: url("../images/heart-3260437-2725130 1.png");
-    display: block;
-    width: 46px;
-    height: 44px;
-    margin: auto;
-  }
-
-  &::after {
-    content: "Happy Patients";
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    color: rgba(61, 61, 63, 0.56);
-    display: block;
-    text-align: center;
-  }
-}
 
 .solutions_banner {
   padding: 75px 0 75px;
-  background-color: #FFFFFF;
+  background-color: rgba(205, 233, 255, 0.11);
   background-size: cover;
   text-align: center;
 
   h2 {
-    font-family: "Roboto", sans-serif;
+    font-family: $Roboto_font;
     font-weight: 500;
     font-size: 42px;
     line-height: 70px;
@@ -294,7 +368,7 @@ $font-family: Arial, sans-serif;
       text-align: center;
 
       h3 {
-        font-family: "Roboto", sans-serif;
+        font-family: $Roboto_font;
         font-weight: 500;
         font-size: 20px;
         line-height: 32px;
@@ -303,7 +377,7 @@ $font-family: Arial, sans-serif;
       }
 
       p {
-        font-family: "Roboto", sans-serif;
+        font-family: $Roboto_font;
         font-weight: 400;
         font-size: 12px;
         line-height: 20px;
@@ -313,9 +387,13 @@ $font-family: Arial, sans-serif;
   }
 }
 
+
+/*about_banner*/
+
+
 .about_banner {
-  padding: 75px 0 143px;
-  background-color: #FFFFFF;
+  padding: 75px 0 75px;
+  background-color: rgba(205, 233, 255, 0.11);
   background-size: cover;
 
   .container {
@@ -353,7 +431,8 @@ $font-family: Arial, sans-serif;
         width: 270px;
         top: 275px;
         left: -40px;
-        .love{
+
+        .love {
           position: absolute;
           display: block;
           left: 90px;
@@ -375,7 +454,7 @@ $font-family: Arial, sans-serif;
 
       .khalid {
         h4 {
-          font-family: "Roboto", sans-serif;
+          font-family: $Roboto_font;
           font-weight: 500;
           font-size: 20px;
           line-height: 32px;
@@ -383,7 +462,7 @@ $font-family: Arial, sans-serif;
         }
 
         p {
-          font-family: 'Poppins', sans-serif;
+          font-family: $Poppins_font;
           font-weight: 400;
           font-size: 12px;
           line-height: 18px;
@@ -400,7 +479,8 @@ $font-family: Arial, sans-serif;
           top: -7px;
           left: -50px;
         }
-        &::after{
+
+        &::after {
           content: url("../images/Star.png");
           display: block;
           width: 10px;
@@ -420,19 +500,21 @@ $font-family: Arial, sans-serif;
     }
 
     h5 {
-      font-family: 'Poppins', sans-serif;
+      font-family: $Poppins_font;
       font-weight: 400;
       font-size: 12px;
       color: #A0A2B3;
     }
-    p{
-      font-family: 'Poppins', sans-serif;
+
+    p {
+      font-family: $Poppins_font;
       font-weight: 500;
       font-size: 12px;
       color: #3D3D3F;
     }
-    .hospital_name{
-      font-family: 'Poppins', sans-serif;
+
+    .hospital_name {
+      font-family: $Poppins_font;
       font-weight: 400;
       font-size: 12px;
       line-height: 32px;
@@ -446,17 +528,17 @@ $font-family: Arial, sans-serif;
     text-align: left;
 
     h3 {
-      font-family: "Roboto", sans-serif;
+      font-family: $Roboto_font;
       font-weight: 500;
       font-size: 42px;
       line-height: 49px;
       letter-spacing: 0.02em;
-      color: #3D3D3F;
+      color: $H_color;
       margin-bottom: 36px;
     }
 
     p {
-      font-family: "Roboto", sans-serif;
+      font-family: $Roboto_font;
       font-weight: 400;
       font-size: 18px;
       line-height: 30px;
@@ -469,12 +551,12 @@ $font-family: Arial, sans-serif;
       list-style: none;
 
       li {
-        font-family: "Roboto", sans-serif;
+        font-family: $Roboto_font;
         font-weight: 400;
         font-size: 16px;
         line-height: 30px;
         letter-spacing: 0.02em;
-        color: #3D3D3F;
+        color: $H_color;
         display: flex;
         margin-bottom: 24px;
 
@@ -491,16 +573,8 @@ $font-family: Arial, sans-serif;
       }
     }
 
-    .explore {
-      padding: 12px 18px 12px 18px;
-      background-color: #40A3F8;
-      border-radius: 5px;
-      font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 30px;
-      letter-spacing: 0.02em;
-      color: #FFFFFF;
+    a {
+      @include button;
 
       &::after {
         content: "";
@@ -515,8 +589,239 @@ $font-family: Arial, sans-serif;
     }
   }
 }
-.services{
-  h2{
 
+
+/*services*/
+
+
+.services {
+  padding: 65px 0 65px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  background-color: rgba(205, 233, 255, 0.11);
+
+  h2 {
+    font-family: $Roboto_font;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 70px;
+    color: #3E3E3E;
+    margin-bottom: 24px;
   }
+
+  p {
+    font-family: $Roboto_font;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: rgba(61, 61, 63, 0.7);
+    margin-bottom: 79px;
+  }
+}
+
+.owl-carousel {
+  max-width: 1170px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.owl-item {
+  background: linear-gradient(138.88deg, rgba(254, 254, 254, 0) -2.44%, #F9F9F9 -2.43%, rgba(254, 254, 254, 0.51) 98.26%);
+  padding: 55px 55px 0 55px;
+  width: inherit;
+  align-items: center;
+  border-radius: 10px;
+  transition: 0.3s ease;
+
+  .iconn {
+    display: inline-block;
+    height: 77px;
+    margin-bottom: 26px;
+  }
+
+  h3 {
+    font-family: $Roboto_font;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: $H_color;
+    margin-bottom: 23px;
+  }
+
+  p {
+    max-width: 224px;
+    font-family: $Roboto_font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $p_color;
+    margin-bottom: 32px;
+  }
+}
+
+.owl-dots {
+  display: flex;
+  max-width: 130px;
+  justify-content: space-between;
+  margin: auto;
+
+  .owl-dot {
+    background-color: rgba(64, 163, 248, 0.5);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: none;
+  }
+
+  .owl-dot.active {
+    width: 60px;
+    background-color: #40A3F8;
+    border-radius: 6px;
+  }
+}
+
+.owl-stage {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 15px;
+}
+
+.owl-item.active.center {
+  background: linear-gradient(180deg, #FFFFFF 95%, rgba(64, 163, 248, 0.5) 5%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transform: scale(1.1);
+}
+
+
+/*doctors--banner*/
+
+.doctors--banner {
+  @include main_background;
+  text-align: center;
+
+  .main_h2 {
+    @include banner_h2;
+  }
+
+  .main_p {
+    @include banner_p;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: auto;
+
+    .doctors_card {
+      background-color: #FFFFFF;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+      padding: 10px 13px 20px 13px;
+      margin-bottom: 58px;
+
+      .card_h3 {
+        font-family: $Roboto_font;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+        color: #3E3E3E;
+      }
+
+      .card_p {
+        font-family: $Roboto_font;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $p_color;
+        margin-bottom: 17px;
+      }
+
+      .d_socials_icon {
+        margin-right: 6px;
+        margin-left: 6px;
+      }
+
+      .doctors_card_img {
+        margin-bottom: 17px;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  a {
+    @include button;
+  }
+}
+
+
+/*mobileapp_banner*/
+
+
+.mobileapp--banner {
+  @include main_background;
+  padding: inherit;
+
+  .container {
+    max-width: 1170px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+
+    .mobileapp_image {
+      position: relative;
+      left: -180px;
+      bottom: -15px;
+      max-width: 690px;
+    }
+
+    .morkup_iphone {
+      display: block;
+    }
+
+    .mobileapp_text {
+      text-align: left;
+      width: 503px;
+
+      h3 {
+        font-family: $Roboto_font;
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 60px;
+        color: $H_color;
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: rgba(61, 61, 63, 0.7);
+        margin-bottom: 30px;
+      }
+
+      .store_icons {
+        img {
+          &:first-of-type {
+            margin-right: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+/*reviews--banner*/
+
+
+
+.reviews--banner{
+  @include main_background;
+  text-align: center;
 }

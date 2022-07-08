@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style_preprocessor.css">
 </head>
 <body>
@@ -45,38 +46,37 @@
             <form>
                 <div class="searcher">
                     <div>
-                        <label for="search"></label>
+                        <label class="search" for="search"></label>
                         <input id="search" type="text" name="find_doctor" placeholder="Find you doctor">
                     </div>
-                    <div>
-                        <p class="city_list">New York, USA</p>
+                    <div class="demo">
+                        <form action="#">
+                            <fieldset>
+                                <label class="select_menu" for="speed"></label>
+                                <select name="speed" id="speed">
+                                    <option>New York, USA</option>
+                                    <option>San Jose, USA</option>
+                                    <option selected="selected">Tel Aviv, ISR</option>
+                                    <option>Kyiv, UA</option>
+                                    <option>London, UK</option>
+                                </select>
+                            </fieldset>
+                        </form>
                     </div>
                     <div class="search">
-                        <a href="#" target="_blank"><img src="images/Search_button(1).svg"></a>
+                        <a href="#" target="_blank"><img src="images/Search_button(1).svg" alt="image"></a>
                     </div>
                 </div>
             </form>
         </div>
         <div class="main_photo">
-            <div class="girl">
-                <img src="images/women.png">
-            </div>
-            <div class="blue_circules">
-                <img src="images/Back%20image%20shape.svg">
-            </div>
+            <img class="blue_circules" src="images/Back%20image%20shape.svg" alt="image">
+            <img class="girl_photo" src="images/women.png" alt="image">
             <div class="bubbles">
-                <div class="main_icon1">
-                    <img src="images/Chat%20icon.png">
-                </div>
-                <div class="main_icon2">
-                    <img src="images/Chat%20icon2.png">
-                </div>
-                <div class="main_icon3">
-                    <img src="images/Chat%20icon3.png">
-                </div>
-                <div class="main_icon4">
-                    <img src="images/Patient%20review.png">
-                </div>
+                <img class="main_icon1" src="images/Chat%20icon.png" alt="image">
+                <img class="main_icon2" src="images/Chat%20icon2.png" alt="image">
+                <img class="main_icon3" src="images/Chat%20icon3.png" alt="image">
+                <img class="main_icon4" src="images/Patient%20review.png" alt="image">
                 <article class="main_icon5">
                     2500+
                 </article>
@@ -88,30 +88,29 @@
     <h2>3 Easy Steps and Get Your Solution</h2>
     <div class="container">
         <div class="steps">
-            <img src="images/step1.png">
+            <img src="images/step1.png" alt="image">
             <h3>Find best doctor's</h3>
             <p>Find your doctor easily with a minimum of effort. We've kept everything organised for you.</p>
         </div>
         <div class="steps">
-            <img src="images/step2.png">
+            <img src="images/step2.png" alt="image">
             <h3>Get Appointment</h3>
             <p>Ask for an appointment of the doctor quickly with almost a single click. We take care of the rest.</p>
         </div>
         <div class="steps">
-            <img src="images/step3.png">
+            <img src="images/step3.png" alt="image">
             <h3>Happy Consultations</h3>
             <p>Do consultations and take the service based on your appointment. Get back to good health.</p>
         </div>
-    </div>
     </div>
 </section>
 <section class="about_banner">
     <div class="container">
         <div class="doctor_photo">
-            <img class="portrait" src="images/Doctor.png">
-            <img class="bubble1" src="images/User%20feedback.png">
+            <img class="portrait" src="images/Doctor.png" alt="image">
+            <img class="bubble1" src="images/User%20feedback.png" alt="image">
             <div class="Khalid_review">
-                <img class="love" src="images/Love.svg">
+                <img class="love" src="images/Love.svg" alt="icon">
                 <div class="khalid">
                     <h4>Dr. Khalid Abbed</h4>
                     <p>Carddiologist (MBBS)</p>
@@ -142,13 +141,108 @@
                 <li>Consultation our top specialists</li>
                 <li>Doctors are available 24/7</li>
             </ul>
-            <a class="explore">Explore specialists</a>
+            <a href="#">Explore specialists</a>
         </div>
     </div>
 </section>
 <section class="services">
-<h2>Our Service</h2>
-    <p>Our doctors have high qualified skills and are guaranteed to help you recover from your disease.</p>
+    <h2>Our Service</h2>
+    <p>Our doctors have high qualified skills and are guaranteed <br> to help you recover from your disease.</p>
+    <div class="owl-carousel">
+        <article>
+            <img class="iconn" src="images/Iconn3.png" alt="icon">
+            <h3>Cardiology</h3>
+            <p>Our cardiologists are skilled at the diagnosing and treating diseases
+                of the cardiovascular system.</p>
+        </article>
+        <article data-hash="zero">
+            <img class="iconn" src="images/Iconn1.png" alt="icon">
+            <h3>Pulmanology</h3>
+            <p>Our Pulmonologist are skilled at diagnosing treating diseases of the Pulmonology system.</p>
+        </article>
+        <article>
+            <img class="iconn" src="images/Iconn2.png" alt="icon">
+            <h3>Medicine</h3>
+            <p>Our medcine doctor are skilled at diagnosing treating diseases of the latest medicne system.</p>
+        </article>
+        <article>
+            <img class="iconn" src="images/Iconn1.png" alt="icon">
+            <h3>Pulmanology</h3>
+            <p>Our Pulmonologist are skilled at diagnosing treating diseases of the Pulmonology system.</p>
+        </article>
+    </div>
+</section>
+<section class="doctors--banner">
+    <h2 class="main_h2">Meet Our Certified Online Doctors</h2>
+    <p class="main_p">Our online doctors have an average of 15 years experience <br> and a 98% satisfaction rating, they
+        really set us
+        apart!</p>
+    <div class="container">
+        <div class="doctors_card">
+            <img class="doctors_card_img" src="images/doctor_img.png" alt="icon">
+            <h3 class="card_h3">Dr Amanda Linda </h3>
+            <p class="card_p">Dentist Specilist</p>
+            <div class="doctor__socials">
+                <img class="d_socials_icon" src="images/Fb.svg" alt="icon">
+                <img class="d_socials_icon" src="images/Tw.svg" alt="icon">
+                <img class="d_socials_icon" src="images/Ld.svg" alt="icon">
+            </div>
+        </div>
+        <div class="doctors_card">
+            <img class="doctors_card_img" src="images/doctor_image2.png" alt="icon">
+            <h3 class="card_h3">Dr Alisa Rahman </h3>
+            <p class="card_p">Carddiologist Specilist</p>
+            <div class="doctor__socials">
+                <img class="d_socials_icon" src="images/Fb.svg" alt="icon">
+                <img class="d_socials_icon" src="images/Tw.svg" alt="icon">
+                <img class="d_socials_icon" src="images/Ld.svg" alt="icon">
+            </div>
+        </div>
+        <div class="doctors_card">
+            <img class="doctors_card_img" src="images/doctor_image3.png" alt="icon">
+            <h3 class="card_h3">Dr Anthony Fauci </h3>
+            <p class="card_p">Neurology Specilist</p>
+            <div class="doctor__socials">
+                <img class="d_socials_icon" src="images/Fb.svg" alt="icon">
+                <img class="d_socials_icon" src="images/Tw.svg" alt="icon">
+                <img class="d_socials_icon" src="images/Ld.svg" alt="icon">
+            </div>
+        </div>
+        <div class="doctors_card">
+            <img class="doctors_card_img" src="images/doctor_image4.png" alt="icon">
+            <h3 class="card_h3">Dr Khhalid Abbed </h3>
+            <p class="card_p">Cancer Specilist</p>
+            <div class="doctor__socials">
+                <img class="d_socials_icon" src="images/Fb.svg" alt="icon">
+                <img class="d_socials_icon" src="images/Tw.svg" alt="icon">
+                <img class="d_socials_icon" src="images/Ld.svg" alt="icon">
+            </div>
+        </div>
+    </div>
+    <a href="#">Explore all Doctors</a>
+</section>
+<section class="mobileapp--banner">
+    <div class="container">
+        <div class="mobileapp_image">
+            <img class="morkup_iphone" src="images/Mockup_iphone.png">
+        </div>
+        <div class="mobileapp_text">
+            <h3>Mobile apps are available
+                Get HealthCare for free!</h3>
+            <p>Get on-demand access to a doctor on your phone with the free HealthCare mobile app. Download and register
+                on our app for free and feel safe for all your family</p>
+            <div class="store_icons">
+                <img src="images/Store=Google%20Play,%20Style=Black.png">
+                <img src="images/Store=App%20Store,%20Style=Black.png">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="reviews--banner">
+    <h3>Look our Clients have to say about us</h3>
+    <div class="container">
+
+    </div>
 </section>
 <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -156,5 +250,7 @@
         crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/78fc89e2f3.js" crossorigin="anonymous"></script>
 <script src="js/owl.carousel.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
