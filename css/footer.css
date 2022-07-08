@@ -1,0 +1,15 @@
+footer {
+  padding: 75px 0 75px;
+  background-color: rgba(205, 233, 255, 0.11);
+  background-size: cover;
+}
+footer .container {
+  max-width: 1170px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+
+/*# sourceMappingURL=footer.css.map */

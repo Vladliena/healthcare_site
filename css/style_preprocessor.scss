@@ -7,14 +7,14 @@
 @import "header";
 @import "normalize.css";
 @import "owl.carousel.css";
-@import "owl.theme.default.css";
 @import "https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Rubik:wght@500&family=Ubuntu&display=swap";
+@import "footer.css";
 
-$Poppins_font: "Poppins", sans-serif;
-$Roboto_font: "Roboto", sans-serif;
+$Poppins_font: 'Poppins', sans-serif;
+$Roboto_font: 'Roboto', sans-serif;
+$Ubuntu_font: 'Ubuntu', sans-serif;
 $H_color: #3D3D3F;
 $p_color: rgba(153, 153, 153, 1);
-
 
 
 @mixin transform($property) {
@@ -618,16 +618,15 @@ $p_color: rgba(153, 153, 153, 1);
     color: rgba(61, 61, 63, 0.7);
     margin-bottom: 79px;
   }
+
+  .owl-carousel {
+    max-width: 1170px;
+    justify-content: space-between;
+    margin: auto;
+  }
 }
 
-.owl-carousel {
-  max-width: 1170px;
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-}
-
-.owl-item {
+.slider_item {
   background: linear-gradient(138.88deg, rgba(254, 254, 254, 0) -2.44%, #F9F9F9 -2.43%, rgba(254, 254, 254, 0.51) 98.26%);
   padding: 55px 55px 0 55px;
   width: inherit;
@@ -661,37 +660,43 @@ $p_color: rgba(153, 153, 153, 1);
   }
 }
 
-.owl-dots {
-  display: flex;
-  max-width: 130px;
-  justify-content: space-between;
-  margin: auto;
+.services {
+  .owl-dots {
+    display: flex;
+    max-width: 130px;
+    justify-content: space-between;
+    margin: auto;
 
-  .owl-dot {
-    background-color: rgba(64, 163, 248, 0.5);
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    border: none;
-  }
+    .owl-dot {
+      background-color: rgba(64, 163, 248, 0.5);
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      border: none;
+    }
 
-  .owl-dot.active {
-    width: 60px;
-    background-color: #40A3F8;
-    border-radius: 6px;
+    .owl-dot.active {
+      width: 60px;
+      background-color: #40A3F8;
+      border-radius: 6px;
+    }
   }
 }
 
-.owl-stage {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin-bottom: 15px;
+.services {
+  .owl-stage {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 15px;
+  }
 }
 
-.owl-item.active.center {
-  background: linear-gradient(180deg, #FFFFFF 95%, rgba(64, 163, 248, 0.5) 5%);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-  transform: scale(1.1);
+.services {
+  .owl-item.active.center {
+    background: linear-gradient(180deg, #FFFFFF 95%, rgba(64, 163, 248, 0.5) 5%);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transform: scale(1.1);
+  }
 }
 
 
@@ -763,7 +768,6 @@ $p_color: rgba(153, 153, 153, 1);
 
 .mobileapp--banner {
   @include main_background;
-  padding: inherit;
 
   .container {
     max-width: 1170px;
@@ -796,7 +800,7 @@ $p_color: rgba(153, 153, 153, 1);
       }
 
       p {
-        font-family: "Roboto", sans-serif;
+        font-family: $Roboto_font;
         font-weight: 400;
         font-size: 18px;
         line-height: 30px;
@@ -816,12 +820,173 @@ $p_color: rgba(153, 153, 153, 1);
 }
 
 
-
 /*reviews--banner*/
 
 
-
-.reviews--banner{
+.reviews--banner {
   @include main_background;
   text-align: center;
+
+  h3 {
+    font-family: $Roboto_font;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 49px;
+    color: $H_color;
+    margin-bottom: 80px;
+  }
+
+  .container {
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+
+    .reviews {
+      background-color: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+      border-radius: 10px;
+      padding: 22px 17px 32px 48px;
+      max-width: 370px;
+      min-height: 342px;
+      position: relative;
+      height: 100%;
+
+      &::after {
+        content: url("../images/Quote_icon.svg");
+        position: absolute;
+        right: 50px;
+        bottom: 325px;
+      }
+
+      .reviewer_name {
+        font-family: $Roboto_font;
+        font-weight: 700;
+        font-size: 20px;
+        color: $H_color;
+        text-align: left;
+
+        &::after {
+          content: url("../images/stars_rate.png");
+          margin-left: 70px;
+        }
+      }
+
+      .reviewer_location {
+        font-family: $Ubuntu_font;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 25px;
+        color: #47C2FF;
+        margin-bottom: 16px;
+        text-align: left;
+      }
+
+      .review_comment {
+        font-family: $Roboto_font;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        color: #454D5D;
+        text-align: left;
+      }
+    }
+  }
+
+  .owl-carousel2 {
+    overflow: hidden;
+
+    .owl-dots {
+      display: none;
+      align-items: center;
+    }
+
+    .owl-stage {
+      display: inline-flex;
+      padding-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .owl-item {
+      width: inherit;
+    }
+
+    .owl-item-active {
+      width: inherit;
+    }
+
+    .owl-prev-active, .owl-next-active {
+      background: #40A3F8;
+    }
+
+    .owl-prev, .owl-next {
+      width: 33.45px;
+      height: 32px;
+      background: linear-gradient(133.16deg, rgba(154, 208, 255, 0.1065) 0%, rgba(111, 188, 255, 0.1005) 112.21%);
+      box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.07);
+      border-radius: 5px;
+      border: none;
+      margin-left: 15px;
+      margin-right: 15px;
+
+      &:hover {
+        background: #40A3F8;
+      }
+    }
+  }
+}
+
+
+/*subscrition--banner*/
+
+
+.subscription--banner {
+  @include main_background;
+
+  .container {
+    background-image: url("../images/background_lines.png");
+    background-color: #40A3F8;
+    margin: auto;
+    background-size: cover;
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 340px;
+    border-radius: 12px;
+
+    .subscription_title {
+      position: relative;
+      left: 118px;
+      .subscription_h3 {
+        font-family: $Roboto_font;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 46px;
+        color: #FFFFFF;
+        margin-bottom: 40px;
+      }
+
+      .subscription_btn {
+        padding: 16px 17px;
+        background-color: #FFFFFF;
+        font-family: $Roboto_font;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #40A3F8;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+    }
+    .subscription_img{
+      display: block;
+      width: 600px;
+      height: 452px;
+      position: relative;
+      right: -69px;
+      bottom: 55px;
+    }
+  }
 }

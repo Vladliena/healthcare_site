@@ -1,0 +1,14 @@
+footer {
+  padding-top: 75px
+  background-color: rgba(205, 233, 255, 0.11);
+  background-size: cover;
+
+  .container {
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    background-color: #FFFFFF;
+  }
+}
