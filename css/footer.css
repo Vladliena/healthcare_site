@@ -18,6 +18,22 @@ footer .footer--bg .container {
   padding-top: 34px;
   padding-bottom: 22px;
 }
+@media screen and (min-width: 360px) and (max-width: 1200px) {
+  footer .footer--bg .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+@media screen and (max-width: 900px) {
+  footer .footer--bg .container {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 417px) {
+  footer .footer--bg .container {
+    justify-content: inherit;
+  }
+}
 footer .footer--bg .container .contacts .logo a {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
@@ -46,6 +62,16 @@ footer .footer--bg .container .contacts .footer_socials img {
   height: 32px;
   width: 32px;
 }
+@media screen and (max-width: 992px) {
+  footer .footer--bg .container .contacts {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 417px) {
+  footer .footer--bg .container .footer_category, footer .footer--bg .container .footer_about {
+    margin-top: 35px;
+  }
+}
 footer .footer--bg .container .footer_category li, footer .footer--bg .container .footer_about li {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -57,6 +83,24 @@ footer .footer--bg .container .footer_category li, footer .footer--bg .container
 }
 footer .footer--bg .container .footer_category li strong, footer .footer--bg .container .footer_about li strong {
   color: #323232;
+}
+@media screen and (max-width: 992px) {
+  footer .footer--bg .container .footer_category, footer .footer--bg .container .footer_about {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 992px) {
+  footer .footer--bg .container .footer_subscribe {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 417px) {
+  footer .footer--bg .container .footer_subscribe {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    margin-top: 20px;
+  }
 }
 footer .footer--bg .container .footer_subscribe form .sub_title_footer {
   margin-bottom: 19px;
@@ -118,6 +162,12 @@ footer .rights {
   font-size: 14px;
   color: #646464;
 }
+@media screen and (min-width: 360px) and (max-width: 1200px) {
+  footer .rights {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
 footer .rights .terms {
   display: flex;
   list-style: none;
@@ -131,6 +181,11 @@ footer .rights .terms a li {
   font-weight: 400;
   font-size: 14px;
   color: #646464;
+}
+@media screen and (min-width: 360px) and (max-width: 480px) {
+  footer .rights .terms a li {
+    margin-left: 25px;
+  }
 }
 
 /*# sourceMappingURL=footer.css.map */

@@ -1,5 +1,6 @@
 @import "normalize.css";
 @import "owl.carousel.css";
+@import "owl.theme.default.css";
 @import "https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Rubik:wght@500&family=Ubuntu&display=swap";
 @import "footer.css";
 * {
@@ -84,8 +85,20 @@ header .container .logo a {
   margin: auto;
   align-items: center;
 }
+@media only screen and (max-width: 1200px) {
+  .main_banner .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 .main_banner .container .main_text {
   max-width: 570px;
+}
+@media screen and (min-width: 360px) and (max-width: 1137px) {
+  .main_banner .container .main_text {
+    margin-bottom: 80px;
+    text-align: center;
+  }
 }
 .main_banner .container .main_text H1 {
   font-family: "Roboto", sans-serif;
@@ -326,15 +339,51 @@ header .container .logo a {
   color: #3E3E3E;
   margin-bottom: 50px;
 }
+@media screen and (min-width: 360px) and (max-width: 565px) {
+  .solutions_banner h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    line-height: 42px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .solutions_banner h2 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 .solutions_banner .container {
   display: flex;
   justify-content: space-between;
   max-width: 1170px;
   margin: auto;
 }
+@media only screen and (max-width: 1200px) {
+  .solutions_banner .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .solutions_banner .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .solutions_banner .container .steps {
   max-width: 320px;
   text-align: center;
+}
+@media only screen and (max-width: 1200px) {
+  .solutions_banner .container .steps {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .solutions_banner .container .steps {
+    margin-bottom: 20px;
+  }
 }
 .solutions_banner .container .steps h3 {
   font-family: "Roboto", sans-serif;
@@ -358,16 +407,35 @@ header .container .logo a {
   background-color: rgba(205, 233, 255, 0.11);
   background-size: cover;
 }
+@media only screen and (max-width: 1200px) {
+  .about_banner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 .about_banner .container {
   max-width: 1170px;
   display: flex;
   justify-content: space-between;
   margin: auto;
   align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 360px) and (max-width: 1105px) {
+  .about_banner .container {
+    justify-content: center;
+  }
 }
 .about_banner .container .doctor_photo {
   max-width: 550px;
   position: relative;
+  margin-right: 20px;
+}
+@media screen and (min-width: 360px) and (max-width: 1105px) {
+  .about_banner .container .doctor_photo {
+    margin-bottom: 50px;
+    margin-right: 0;
+  }
 }
 .about_banner .container .doctor_photo .portrait {
   display: block;
@@ -376,9 +444,14 @@ header .container .logo a {
 .about_banner .container .doctor_photo .bubble1 {
   position: absolute;
   display: block;
-  width: 230px;
+  max-width: 230px;
   top: 140px;
   right: -25px;
+}
+@media screen and (min-width: 360px) and (max-width: 500px) {
+  .about_banner .container .doctor_photo .bubble1 {
+    display: none;
+  }
 }
 .about_banner .container .doctor_photo .Khalid_review {
   padding: 20px 26px 10px 36px;
@@ -391,6 +464,11 @@ header .container .logo a {
   width: 270px;
   top: 275px;
   left: -40px;
+}
+@media screen and (min-width: 360px) and (max-width: 667px) {
+  .about_banner .container .doctor_photo .Khalid_review {
+    display: none;
+  }
 }
 .about_banner .container .doctor_photo .Khalid_review .love {
   position: absolute;
@@ -473,6 +551,11 @@ header .container .logo a {
   max-width: 510px;
   text-align: left;
 }
+@media screen and (min-width: 360px) and (max-width: 1105px) {
+  .about_banner .about_text {
+    text-align: center;
+  }
+}
 .about_banner .about_text h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -482,6 +565,13 @@ header .container .logo a {
   color: #3D3D3F;
   margin-bottom: 36px;
 }
+@media screen and (min-width: 360px) and (max-width: 565px) {
+  .about_banner .about_text h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    line-height: 42px;
+  }
+}
 .about_banner .about_text p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -490,6 +580,13 @@ header .container .logo a {
   letter-spacing: 0.02em;
   color: rgba(61, 61, 63, 0.7);
   margin-bottom: 17px;
+}
+@media screen and (min-width: 360px) and (max-width: 565px) {
+  .about_banner .about_text p {
+    font-size: 16px;
+    margin-bottom: 45px;
+    line-height: 25px;
+  }
 }
 .about_banner .about_text ul {
   list-style: none;
@@ -504,6 +601,11 @@ header .container .logo a {
   display: flex;
   margin-bottom: 24px;
 }
+@media screen and (min-width: 360px) and (max-width: 1105px) {
+  .about_banner .about_text ul li {
+    justify-content: center;
+  }
+}
 .about_banner .about_text ul li::before {
   content: "";
   background-image: url("../images/check-circle-filled.svg");
@@ -511,8 +613,15 @@ header .container .logo a {
   height: 20px;
   display: block;
   margin-right: 17px;
+  background-repeat: no-repeat;
   top: 5px;
   position: relative;
+}
+@media screen and (min-width: 360px) and (max-width: 517px) {
+  .about_banner .about_text ul li::before {
+    margin-right: -2px;
+    width: 26px;
+  }
 }
 .about_banner .about_text a {
   padding: 12px 18px 12px 18px;
@@ -545,6 +654,21 @@ header .container .logo a {
   text-align: center;
   background-color: rgba(205, 233, 255, 0.11);
 }
+.services .services_text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: rgba(61, 61, 63, 0.7);
+  margin-bottom: 79px;
+}
+@media screen and (min-width: 360px) and (max-width: 565px) {
+  .services .services_text {
+    font-size: 16px;
+    margin-bottom: 45px;
+    line-height: 25px;
+  }
+}
 .services h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -553,34 +677,40 @@ header .container .logo a {
   color: #3E3E3E;
   margin-bottom: 24px;
 }
-.services p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  color: rgba(61, 61, 63, 0.7);
-  margin-bottom: 79px;
+@media screen and (min-width: 360px) and (max-width: 565px) {
+  .services h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    line-height: 42px;
+  }
 }
 .services .owl-carousel {
   max-width: 1170px;
   justify-content: space-between;
   margin: auto;
 }
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .services .owl-carousel {
+    padding: 0 15px 0 15px;
+  }
+}
 
 .slider_item {
   background: linear-gradient(138.88deg, rgba(254, 254, 254, 0) -2.44%, #F9F9F9 -2.43%, rgba(254, 254, 254, 0.51) 98.26%);
-  padding: 55px 55px 0 55px;
+  padding: 55px 55px 35px 55px;
   width: inherit;
   align-items: center;
   border-radius: 10px;
   transition: 0.3s ease;
 }
-.slider_item .iconn {
+
+.iconn {
   display: inline-block;
   height: 77px;
   margin-bottom: 26px;
 }
-.slider_item h3 {
+
+h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -588,14 +718,13 @@ header .container .logo a {
   color: #3D3D3F;
   margin-bottom: 23px;
 }
-.slider_item p {
-  max-width: 224px;
+
+.item_p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
   color: rgb(153, 153, 153);
-  margin-bottom: 32px;
 }
 
 .services .owl-dots {
@@ -624,9 +753,15 @@ header .container .logo a {
 }
 
 .services .owl-item.active.center {
-  background: linear-gradient(180deg, #FFFFFF 95%, rgba(64, 163, 248, 0.5) 5%);
+  background: linear-gradient(180deg, #FFFFFF 95%, rgba(64, 163, 248, 0.9) 5%);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   transform: scale(1.1);
+  border-radius: 10px;
+}
+@media screen and (min-width: 360px) and (max-width: 600px) {
+  .services .owl-item.active.center {
+    transform: none;
+  }
 }
 
 /*doctors--banner*/
@@ -644,6 +779,13 @@ header .container .logo a {
   color: #3E3E3E;
   margin-bottom: 50px;
 }
+@media screen and (min-width: 360px) and (max-width: 565px) {
+  .doctors--banner .main_h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    line-height: 42px;
+  }
+}
 .doctors--banner .main_p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -652,11 +794,36 @@ header .container .logo a {
   color: rgba(61, 61, 63, 0.7);
   margin-bottom: 79px;
 }
+@media screen and (min-width: 360px) and (max-width: 565px) {
+  .doctors--banner .main_p {
+    font-size: 16px;
+    margin-bottom: 45px;
+    line-height: 25px;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 565px) {
+  .doctors--banner .main_p br {
+    display: none;
+  }
+}
 .doctors--banner .container {
   display: flex;
   justify-content: space-between;
   max-width: 1170px;
   margin: auto;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 360px) and (max-width: 567px) {
+  .doctors--banner .container {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 1200px) {
+  .doctors--banner .container {
+    max-width: 650px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .doctors--banner .container .doctors_card {
   background-color: #FFFFFF;
@@ -714,11 +881,52 @@ header .container .logo a {
   margin: auto;
   align-items: center;
 }
+@media screen and (min-width: 360px) and (max-width: 565px) {
+  .mobileapp--banner .container {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1026px) and (max-width: 1200px) {
+  .mobileapp--banner .container {
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 1024px) {
+  .mobileapp--banner .container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 .mobileapp--banner .container .mobileapp_image {
   position: relative;
   left: -180px;
   bottom: -15px;
   max-width: 690px;
+}
+@media screen and (min-width: 1026px) and (max-width: 1200px) {
+  .mobileapp--banner .container .mobileapp_image {
+    max-width: 590px;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 1024px) {
+  .mobileapp--banner .container .mobileapp_image {
+    bottom: 0;
+  }
+}
+@media only screen and (max-width: 825px) {
+  .mobileapp--banner .container .mobileapp_image {
+    left: -100px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .mobileapp--banner .container .mobileapp_image {
+    left: -70px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .mobileapp--banner .container .mobileapp_image {
+    display: none;
+  }
 }
 .mobileapp--banner .container .morkup_iphone {
   display: block;
@@ -726,6 +934,17 @@ header .container .logo a {
 .mobileapp--banner .container .mobileapp_text {
   text-align: left;
   width: 503px;
+}
+@media screen and (min-width: 360px) and (max-width: 1024px) {
+  .mobileapp--banner .container .mobileapp_text {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .mobileapp--banner .container .mobileapp_text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .mobileapp--banner .container .mobileapp_text h3 {
   font-family: "Roboto", sans-serif;
@@ -735,6 +954,13 @@ header .container .logo a {
   color: #3D3D3F;
   margin-bottom: 30px;
 }
+@media screen and (min-width: 360px) and (max-width: 565px) {
+  .mobileapp--banner .container .mobileapp_text h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    line-height: 42px;
+  }
+}
 .mobileapp--banner .container .mobileapp_text p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -742,6 +968,13 @@ header .container .logo a {
   line-height: 30px;
   color: rgba(61, 61, 63, 0.7);
   margin-bottom: 30px;
+}
+@media screen and (min-width: 360px) and (max-width: 565px) {
+  .mobileapp--banner .container .mobileapp_text p {
+    font-size: 16px;
+    margin-bottom: 45px;
+    line-height: 25px;
+  }
 }
 .mobileapp--banner .container .mobileapp_text .store_icons img:first-of-type {
   margin-right: 13px;
@@ -753,6 +986,7 @@ header .container .logo a {
   background-color: rgba(205, 233, 255, 0.11);
   background-size: cover;
   text-align: center;
+  padding-bottom: 95px;
 }
 .reviews--banner h3 {
   font-family: "Roboto", sans-serif;
@@ -762,41 +996,82 @@ header .container .logo a {
   color: #3D3D3F;
   margin-bottom: 80px;
 }
-.reviews--banner .container {
-  max-width: 1170px;
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  align-items: center;
+@media screen and (min-width: 360px) and (max-width: 565px) {
+  .reviews--banner h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    line-height: 42px;
+  }
 }
-.reviews--banner .container .reviews {
+@media screen and (min-width: 360px) and (max-width: 1200px) {
+  .reviews--banner h3 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.reviews--banner .container .owl-carousel-2 {
+  margin: auto;
+  max-width: 1170px;
+}
+@media screen and (max-width: 600px) {
+  .reviews--banner .container .owl-carousel-2 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.reviews--banner .container .owl-carousel-2 .owl-stage-outer {
+  padding-top: 50px;
+}
+.reviews--banner .container .owl-carousel-2 .reviews {
   background-color: #FFFFFF;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   border-radius: 10px;
-  padding: 22px 17px 32px 48px;
+  padding: 22px 17px 22px 17px;
   max-width: 370px;
-  min-height: 342px;
+  min-height: 384px;
   position: relative;
   height: 100%;
 }
-.reviews--banner .container .reviews::after {
+@media screen and (max-width: 600px) {
+  .reviews--banner .container .owl-carousel-2 .reviews {
+    max-width: 500px;
+    margin: auto;
+    min-height: 345px;
+  }
+}
+.reviews--banner .container .owl-carousel-2 .reviews::after {
   content: url("../images/Quote_icon.svg");
   position: absolute;
   right: 50px;
-  bottom: 325px;
+  bottom: 365px;
 }
-.reviews--banner .container .reviews .reviewer_name {
+@media screen and (max-width: 600px) {
+  .reviews--banner .container .owl-carousel-2 .reviews::after {
+    bottom: 325px;
+  }
+}
+.reviews--banner .container .owl-carousel-2 .reviews .reviewer_name {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 20px;
   color: #3D3D3F;
   text-align: left;
 }
-.reviews--banner .container .reviews .reviewer_name::after {
+.reviews--banner .container .owl-carousel-2 .reviews .reviewer_name::after {
   content: url("../images/stars_rate.png");
   margin-left: 70px;
 }
-.reviews--banner .container .reviews .reviewer_location {
+@media screen and (max-width: 1051px) {
+  .reviews--banner .container .owl-carousel-2 .reviews .reviewer_name::after {
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .reviews--banner .container .owl-carousel-2 .reviews .reviewer_name::after {
+    margin-left: 200px;
+  }
+}
+.reviews--banner .container .owl-carousel-2 .reviews .reviewer_location {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -805,7 +1080,7 @@ header .container .logo a {
   margin-bottom: 16px;
   text-align: left;
 }
-.reviews--banner .container .reviews .review_comment {
+.reviews--banner .container .owl-carousel-2 .reviews .review_comment {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -813,46 +1088,18 @@ header .container .logo a {
   color: #454D5D;
   text-align: left;
 }
-.reviews--banner .owl-carousel2 {
-  overflow: hidden;
-}
-.reviews--banner .owl-carousel2 .owl-dots {
-  display: none;
-  align-items: center;
-}
-.reviews--banner .owl-carousel2 .owl-stage {
-  display: inline-flex;
-  padding-top: 40px;
-  margin-bottom: 40px;
-}
-.reviews--banner .owl-carousel2 .owl-item {
-  width: inherit;
-}
-.reviews--banner .owl-carousel2 .owl-item-active {
-  width: inherit;
-}
-.reviews--banner .owl-carousel2 .owl-prev-active, .reviews--banner .owl-carousel2 .owl-next-active {
-  background: #40A3F8;
-}
-.reviews--banner .owl-carousel2 .owl-prev, .reviews--banner .owl-carousel2 .owl-next {
-  width: 33.45px;
-  height: 32px;
-  background: linear-gradient(133.16deg, rgba(154, 208, 255, 0.1065) 0%, rgba(111, 188, 255, 0.1005) 112.21%);
-  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.07);
-  border-radius: 5px;
-  border: none;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-.reviews--banner .owl-carousel2 .owl-prev:hover, .reviews--banner .owl-carousel2 .owl-next:hover {
-  background: #40A3F8;
-}
 
 /*subscrition--banner*/
 .subscription--banner {
   padding: 75px 0 75px;
   background-color: rgba(205, 233, 255, 0.11);
   background-size: cover;
+}
+@media only screen and (max-width: 1200px) {
+  .subscription--banner {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 .subscription--banner .container {
   background-image: url("../images/background_lines.png");
@@ -866,9 +1113,24 @@ header .container .logo a {
   height: 340px;
   border-radius: 12px;
 }
+@media screen and (min-width: 360px) and (max-width: 835px) {
+  .subscription--banner .container {
+    padding-top: 30px;
+  }
+}
 .subscription--banner .container .subscription_title {
   position: relative;
   left: 118px;
+}
+@media screen and (min-width: 360px) and (max-width: 835px) {
+  .subscription--banner .container .subscription_title {
+    left: 60px;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 457px) {
+  .subscription--banner .container .subscription_title {
+    left: 20px;
+  }
 }
 .subscription--banner .container .subscription_title .subscription_h3 {
   font-family: "Roboto", sans-serif;
@@ -877,6 +1139,12 @@ header .container .logo a {
   line-height: 46px;
   color: #FFFFFF;
   margin-bottom: 40px;
+}
+@media screen and (min-width: 360px) and (max-width: 565px) {
+  .subscription--banner .container .subscription_title .subscription_h3 {
+    font-size: 32px;
+    line-height: 42px;
+  }
 }
 .subscription--banner .container .subscription_title .subscription_btn {
   padding: 16px 17px;
@@ -896,6 +1164,11 @@ header .container .logo a {
   position: relative;
   right: -69px;
   bottom: 55px;
+}
+@media screen and (min-width: 360px) and (max-width: 835px) {
+  .subscription--banner .container .subscription_img {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style_preprocessor.css.map */

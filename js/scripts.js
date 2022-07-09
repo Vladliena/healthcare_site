@@ -1,26 +1,38 @@
 $(document).ready(function(){
 
-    $('.owl-carousel').owlCarousel({
-        items:3,
+    $('.owl-carousel-1').owlCarousel({
         loop:true,
         center:true,
         margin:65,
         URLhashListener:true,
         autoplayHoverPause:true,
-        startPosition: 'URLHash'
-    });
-    $('.owl-carousel2').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:true,
-        dots: false,
-        items:3,
+        startPosition: 'URLHash',
         responsive:{
             0:{
-                items:3
+                items:1
             },
             600:{
+                items:2
+            },
+            1000:{
                 items:3
+            }
+        }
+    });
+    $('.owl-carousel-2').owlCarousel({
+        center:true,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        loop: true,
+        margin:65,
+        nav: false,
+        dots: false,
+        responsive:{
+            0:{
+                items:1,
+            },
+            600:{
+                items:2
             },
             1000:{
                 items:3
