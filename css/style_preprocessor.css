@@ -541,7 +541,7 @@ span.icon-bar {
     right: -48px;
   }
 }
-@media screen and (max-width: 360px) and (max-width: 544px) {
+@media screen and (min-width: 360px) and (max-width: 544px) {
   .main_banner .main_photo .main_icon5 {
     bottom: 29px;
     right: -27px;

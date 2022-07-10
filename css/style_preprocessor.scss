@@ -404,7 +404,7 @@ $p_color: rgba(153, 153, 153, 1);
         bottom: 156px;
         right: -48px;
       }
-      @media screen and (max-width: 360px) and (max-width: 544px) {
+      @media screen and (min-width: 360px) and (max-width: 544px) {
         bottom: 29px;
         right: -27px;
       }
