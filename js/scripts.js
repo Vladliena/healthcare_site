@@ -54,3 +54,11 @@ $( function() {
     $( "#salutation" ).selectmenu();
 } );
 
+//menu toggle
+(function($){
+    $('.nav-toggle').click(function(e){
+        e.preventDefault();
+        $('.nav-toggle').toggleClass('active');
+        $('.nav-menu').toggleClass('active');
+    })
+})(jQuery);
