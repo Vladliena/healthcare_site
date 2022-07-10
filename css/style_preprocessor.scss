@@ -80,12 +80,13 @@ $p_color: rgba(153, 153, 153, 1);
       padding-left: 15px;
       padding-right: 15px;
     }
-    @media screen and (min-width: 360px) and (max-width: 1137px){
+    @media screen and (min-width: 360px) and (max-width: 1137px) {
+      flex-direction: column;
     }
 
     .main_text {
       max-width: 570px;
-      @media screen and (min-width: 360px) and (max-width: 1137px){
+      @media screen and (min-width: 360px) and (max-width: 1137px) {
         margin-bottom: 80px;
         text-align: center;
       }
@@ -123,6 +124,11 @@ $p_color: rgba(153, 153, 153, 1);
         border-radius: 8px;
         display: flex;
         justify-content: space-between;
+        @media screen and (min-width: 360px) and (max-width: 478px) {
+          justify-content: center;
+          display: grid;
+          background-color: inherit;
+        }
 
         input {
           border-radius: 8px;
@@ -135,6 +141,16 @@ $p_color: rgba(153, 153, 153, 1);
           font-size: 14px;
           line-height: 24px;
           color: rgba(0, 0, 0, 0.3);
+          @media screen and (min-width: 478px) and (max-width: 550px) {
+            font-size: 12px;
+            max-width: 172px;
+          }
+          @media screen and (min-width: 360px) and (max-width: 477px) {
+            font-size: 14px;
+            max-width: 216px;
+            margin-bottom: 25px;
+            border: 2px solid #40A3F8;
+          }
         }
 
         fieldset {
@@ -154,6 +170,15 @@ $p_color: rgba(153, 153, 153, 1);
           color: black;
           display: flex;
           border: none;
+          @media screen and (min-width: 478px) and (max-width: 550px) {
+            font-size: 12px;
+          }
+          @media screen and (min-width: 360px) and (max-width: 477px) {
+            font-size: 14px;
+            min-width: 216px;
+            margin-bottom: 25px;
+            background-color: rgba(64, 163, 248, 0.48);
+          }
 
           &::before {
             content: '';
@@ -226,6 +251,16 @@ $p_color: rgba(153, 153, 153, 1);
     max-width: 590px;
     position: relative;
     display: flex;
+    @media screen and (max-width: 1361px) {
+      left: -70px;
+      width: 336px;
+    }
+    @media screen and (max-width: 1137px) {
+      left: 0;
+    }
+    @media screen and (min-width: 360px) and (max-width: 544px) {
+      width: 248px;
+    }
 
     .blue_circules {
       position: absolute;
@@ -235,6 +270,16 @@ $p_color: rgba(153, 153, 153, 1);
       height: 590px;
       right: -75px;
       bottom: 97px;
+      @media screen and (max-width: 1361px) {
+        bottom: -6px;
+        right: -60px;
+        width: 464px;
+      }
+      @media screen and (min-width: 360px) and (max-width: 544px) {
+        bottom: -79px;
+        right: -37px;
+        width: 326px;
+      }
     }
 
     .girl_photo {
@@ -250,6 +295,13 @@ $p_color: rgba(153, 153, 153, 1);
       left: -70px;
       display: block;
       animation: jump 1.2s infinite;
+      @media screen and (max-width: 1361px) {
+        left: -57px;
+        bottom: 394px;
+      }
+      @media screen and (min-width: 360px) and (max-width: 544px) {
+        display: none;
+      }
       @keyframes jump {
         0% {
           transform: scale(0.90, 0.90);
@@ -270,6 +322,12 @@ $p_color: rgba(153, 153, 153, 1);
       bottom: 530px;
       right: -50px;
       animation: jump 1.2s infinite;
+      @media screen and (max-width: 1361px) {
+        bottom: 398px;
+      }
+      @media screen and (min-width: 360px) and (max-width: 544px) {
+        display: none;
+      }
       @keyframes jump {
         0% {
           transform: scale(0.90, 0.90);
@@ -290,6 +348,13 @@ $p_color: rgba(153, 153, 153, 1);
       bottom: 280px;
       left: -120px;
       animation: jump 1.2s infinite;
+      @media screen and (max-width: 1361px) {
+        bottom: 223px;
+        left: -118px;
+      }
+      @media screen and (min-width: 360px) and (max-width: 544px) {
+        display: none;
+      }
       @keyframes jump {
         0% {
           transform: scale(0.90, 0.90);
@@ -309,6 +374,14 @@ $p_color: rgba(153, 153, 153, 1);
       bottom: 60px;
       left: -125px;
       display: block;
+      @media screen and (max-width: 1361px) {
+        left: -75px;
+        width: 239px;
+        bottom: 68px;
+      }
+      @media screen and (min-width: 360px) and (max-width: 544px) {
+        display: none;
+      }
     }
 
     .main_icon5 {
@@ -325,6 +398,14 @@ $p_color: rgba(153, 153, 153, 1);
       font-size: 24px;
       line-height: 36px;
       color: rgba(61, 61, 63, 0.9);
+      @media screen and (max-width: 1361px) {
+        bottom: 156px;
+        right: -48px;
+      }
+      @media screen and (max-width: 360px) and (max-width: 544px) {
+        bottom: 29px;
+        right: -27px;
+      }
 
       &::before {
         content: '';
@@ -433,6 +514,9 @@ $p_color: rgba(153, 153, 153, 1);
   @media only screen and (max-width: 1200px) {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  @media screen and (min-width: 360px) and (max-width: 992px) {
+    padding-top: 20px;
   }
 
   .container {
@@ -793,6 +877,10 @@ h3 {
 
   .main_h2 {
     @include banner_h2;
+    @media only screen and (max-width: 1200px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
     @media screen and (min-width: 360px) and (max-width: 565px) {
       font-size: 32px;
       margin-bottom: 20px;
@@ -1100,17 +1188,17 @@ h3 {
     align-items: center;
     height: 340px;
     border-radius: 12px;
-    @media screen and (min-width: 360px) and (max-width: 835px){
+    @media screen and (min-width: 360px) and (max-width: 835px) {
       padding-top: 30px;
     }
 
     .subscription_title {
       position: relative;
       left: 118px;
-      @media screen and (min-width: 360px) and (max-width: 835px){
+      @media screen and (min-width: 360px) and (max-width: 835px) {
         left: 60px;
       }
-      @media screen and (min-width: 360px) and (max-width: 457px){
+      @media screen and (min-width: 360px) and (max-width: 457px) {
         left: 20px;
       }
 
@@ -1147,7 +1235,7 @@ h3 {
       position: relative;
       right: -69px;
       bottom: 55px;
-      @media screen and (min-width: 360px) and (max-width: 835px){
+      @media screen and (min-width: 360px) and (max-width: 835px) {
         display: none;
       }
     }
