@@ -176,10 +176,7 @@ footer .rights .terms {
   display: flex;
   list-style: none;
 }
-footer .rights .terms a {
-  text-decoration: none;
-}
-footer .rights .terms a li {
+footer .rights .terms li {
   margin-left: 54px;
   font-family: "DM Sans", sans-serif;
   font-weight: 400;
@@ -187,7 +184,7 @@ footer .rights .terms a li {
   color: #646464;
 }
 @media screen and (min-width: 360px) and (max-width: 480px) {
-  footer .rights .terms a li {
+  footer .rights .terms li {
     margin-left: 25px;
   }
 }

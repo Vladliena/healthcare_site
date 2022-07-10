@@ -185,10 +185,6 @@ footer {
     .terms {
       display: flex;
       list-style: none;
-
-      a {
-        text-decoration: none;
-
         li {
           margin-left: 54px;
           font-family: 'DM Sans', sans-serif;;
@@ -200,6 +196,6 @@ footer {
           }
         }
       }
-    }
   }
 }
+
