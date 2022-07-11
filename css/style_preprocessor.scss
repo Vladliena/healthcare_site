@@ -267,7 +267,6 @@ $p_color: rgba(153, 153, 153, 1);
 
     .blue_circules {
       position: absolute;
-      z-index: 1;
       display: block;
       width: 590px;
       height: 590px;
@@ -288,11 +287,10 @@ $p_color: rgba(153, 153, 153, 1);
     .girl_photo {
       display: block;
       width: 100%;
-      z-index: 2;
+      z-index: 1;
     }
 
     .main_icon1 {
-      z-index: 3;
       position: absolute;
       bottom: 500px;
       left: -70px;
@@ -319,7 +317,6 @@ $p_color: rgba(153, 153, 153, 1);
     }
 
     .main_icon2 {
-      z-index: 4;
       position: absolute;
       display: block;
       bottom: 530px;
@@ -345,7 +342,6 @@ $p_color: rgba(153, 153, 153, 1);
     }
 
     .main_icon3 {
-      z-index: 5;
       position: absolute;
       display: block;
       bottom: 280px;
@@ -372,7 +368,7 @@ $p_color: rgba(153, 153, 153, 1);
     }
 
     .main_icon4 {
-      z-index: 6;
+      z-index: 2;
       position: absolute;
       bottom: 60px;
       left: -125px;
@@ -391,7 +387,7 @@ $p_color: rgba(153, 153, 153, 1);
       padding: 6px 26px 10px 26px;
       background-color: rgba(253, 254, 254, 0.9);
       border-radius: 8px;
-      z-index: 7;
+      z-index: 3;
       position: absolute;
       text-align: center;
       bottom: 175px;
@@ -1101,6 +1097,7 @@ h3 {
 
       .owl-stage-outer {
         padding-top: 50px;
+        overflow: inherit;
       }
 
       .reviews {
