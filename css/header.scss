@@ -160,6 +160,8 @@ span.icon-bar {
         display: grid;
         justify-content: center;
         text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
       }
     }
 
@@ -173,7 +175,6 @@ span.icon-bar {
               opacity: 100%;
               font-size: 31px;
               margin-bottom: 20px;
-              margin-top: 20px;
               margin-left: 0px;
             }
           }
