@@ -70,6 +70,8 @@ header .container .logo a {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+  color: #FFFFFF;
+  opacity: 100%;
 }
 
 /*burger*/
@@ -138,20 +140,21 @@ span.icon-bar {
     overflow: hidden;
     display: inherit;
   }
-  .nav-menu.active ul {
-    height: auto;
+  .nav-menu.active {
+    padding-top: 50px;
+    padding-bottom: 50px;
     background-color: rgb(70, 108, 140);
     background-image: url("../images/background_lines.png");
+    height: auto;
     width: 100%;
     background-size: cover;
-    position: absolute;
     top: 0;
     left: 0;
+  }
+  .nav-menu.active ul {
     display: grid;
     justify-content: center;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
   }
   .nav-menu ul li a {
     padding: 0;
@@ -1273,7 +1276,7 @@ h3 {
 }
 .reviews--banner .container .owl-carousel-2 .owl-stage-outer {
   padding-top: 50px;
-  overflow: inherit;
+  overflow: hidden;
 }
 .reviews--banner .container .owl-carousel-2 .reviews {
   background-color: #FFFFFF;
