@@ -933,6 +933,7 @@ h3 {
         font-size: 18px;
         line-height: 30px;
         color: #3E3E3E;
+        margin-bottom: 0;
       }
 
       .card_p {
@@ -957,7 +958,7 @@ h3 {
     }
   }
 
-  a {
+  .botton {
     @include button;
   }
 }

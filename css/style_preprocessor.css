@@ -1091,6 +1091,7 @@ h3 {
   font-size: 18px;
   line-height: 30px;
   color: #3E3E3E;
+  margin-bottom: 0;
 }
 .doctors--banner .container .doctors_card .card_p {
   font-family: "Roboto", sans-serif;
@@ -1109,7 +1110,7 @@ h3 {
   display: block;
   width: 100%;
 }
-.doctors--banner a {
+.doctors--banner .botton {
   padding: 12px 18px 12px 18px;
   background-color: #40A3F8;
   border-radius: 5px;
