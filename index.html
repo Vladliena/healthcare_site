@@ -75,7 +75,7 @@
             </form>
         </div>
         <div class="main_photo">
-            <img class="blue_circules" src="images/Back%20image%20shape.svg" alt="image">
+            <img class="blue_circules wow fadeIn" data-wow-delay="0.5s" src="images/Back%20image%20shape.svg" alt="image">
             <img class="girl_photo" src="images/women.png" alt="image">
             <div class="bubbles">
                 <img class="main_icon1" src="images/Chat%20icon.png" alt="image">
@@ -111,7 +111,7 @@
 </section>
 <section class="about_banner">
     <div class="container">
-        <div class="doctor_photo">
+        <div class="doctor_photo wow fadeInLeft">
             <img class="portrait" src="images/Doctor.png" alt="image">
             <img class="bubble1" src="images/User%20feedback.png" alt="image">
             <div class="Khalid_review">
@@ -137,7 +137,7 @@
                 <h5 class="hospital_name">Mayo Clinic Hospital</h5>
             </div>
         </div>
-        <div class="about_text">
+        <div class="about_text wow fadeInRight" data-wow-delay="0.5s">
             <h3>Best quality service with our experience doctors</h3>
             <p>With our top doctors, we are able to provide best medical services above average We have highly
                 experienced doctors, so don't worry They are also very talented in their fields</p>
@@ -232,10 +232,10 @@
 </section>
 <section class="mobileapp--banner">
     <div class="container">
-        <div class="mobileapp_image">
+        <div class="mobileapp_image wow fadeInLeft">
             <img alt="image" class="morkup_iphone" src="images/Mockup_iphone1.png">
         </div>
-        <div class="mobileapp_text">
+        <div class="mobileapp_text wow fadeInRight" data-wow-delay="0.5s">
             <h3>Mobile apps are available
                 Get HealthCare for free!</h3>
             <p>Get on-demand access to a doctor on your phone with the free HealthCare mobile app. Download and register
@@ -337,21 +337,21 @@
             </div>
             <div class="footer_category">
                 <ul>
-                    <li><a><strong>Category</strong></a></li>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Reviews</li>
-                    <li>Article</li>
+                    <li><strong>Category</strong></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Article</a></li>
                 </ul>
             </div>
             <div class="footer_about">
                 <ul>
-                    <li><a><strong>About</strong></a></li>
-                    <li>Partners</li>
-                    <li>Careers</li>
-                    <li>Press</li>
-                   <li>Community</li>
+                    <li><strong>About</strong></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                   <li><a href="#">Community</a></li>
                 </ul>
             </div>
             <div class="footer_subscribe">
@@ -369,9 +369,9 @@
     <div class="rights">
         <p>© 2021 Healthcare - All rights reserved.</p>
         <ul class="terms">
-                <li>Privacy</li>
-                <li>Security</li>
-                <li>Terms</li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Security</a></li>
+                <li><a href="#">Terms</a></li>
         </ul>
     </div>
 </footer>
@@ -382,6 +382,10 @@
 <script src="https://kit.fontawesome.com/78fc89e2f3.js" crossorigin="anonymous"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 <script src="js/scripts.js"></script>
 </body>
 </html>

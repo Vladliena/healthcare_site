@@ -81,13 +81,14 @@ footer {
           font-weight: 400;
           font-size: 14px;
           line-height: 14px;
-          color: #646464;
           list-style: none;
           margin-bottom: 24px;
-
+          a{
+            color: #646464;
           strong {
             color: #323232;
           }
+        }
         }
 
         @media screen and (max-width: 992px) {
@@ -186,6 +187,7 @@ footer {
       display: flex;
       list-style: none;
         li {
+          a{
           margin-left: 54px;
           font-family: 'DM Sans', sans-serif;;
           font-weight: 400;
@@ -193,6 +195,7 @@ footer {
           color: #646464;
           @media screen and (min-width: 360px) and (max-width: 480px){
             margin-left: 25px;
+          }
           }
         }
       }
