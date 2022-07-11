@@ -141,21 +141,23 @@ span.icon-bar {
     display: inherit;
   }
   .nav-menu.active {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  .nav-menu.active ul {
-    height: auto;
     background-color: rgb(70, 108, 140);
     background-image: url("../images/background_lines.png");
     width: 100%;
-    background-size: cover;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 100px;
+  }
+  .nav-menu.active ul {
     position: absolute;
     top: 0;
     left: 0;
-    display: grid;
-    justify-content: center;
+    display: contents;
     text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .nav-menu ul li a {
     padding: 0;
@@ -163,7 +165,7 @@ span.icon-bar {
     color: #FFFFFF;
     opacity: 100%;
     font-size: 31px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     margin-left: 0px;
   }
   .nav-toggle {
