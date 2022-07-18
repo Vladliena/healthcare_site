@@ -1177,11 +1177,6 @@ h3 {
   bottom: -15px;
   max-width: 690px;
 }
-@media screen and (min-width: 1026px) and (max-width: 1200px) {
-  .mobileapp--banner .container .mobileapp_image {
-    max-width: 590px;
-  }
-}
 @media screen and (min-width: 360px) and (max-width: 1024px) {
   .mobileapp--banner .container .mobileapp_image {
     bottom: 0;
@@ -1190,11 +1185,6 @@ h3 {
 @media only screen and (max-width: 825px) {
   .mobileapp--banner .container .mobileapp_image {
     left: -150px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .mobileapp--banner .container .mobileapp_image {
-    left: -70px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -1207,7 +1197,6 @@ h3 {
 }
 .mobileapp--banner .container .mobileapp_text {
   text-align: left;
-  width: 503px;
 }
 @media screen and (min-width: 360px) and (max-width: 1024px) {
   .mobileapp--banner .container .mobileapp_text {

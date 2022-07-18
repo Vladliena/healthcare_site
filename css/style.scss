@@ -1005,17 +1005,11 @@ h3 {
       left: -180px;
       bottom: -15px;
       max-width: 690px;
-      @media screen and (min-width: 1026px) and (max-width: 1200px) {
-        max-width: 590px;
-      }
       @media screen and (min-width: 360px) and (max-width: 1024px) {
         bottom: 0;
       }
       @media only screen and (max-width: 825px) {
         left: -150px;
-      }
-      @media only screen and (max-width: 767px) {
-        left: -70px;
       }
       @media only screen and (max-width: 600px) {
         display: none;
@@ -1028,7 +1022,6 @@ h3 {
 
     .mobileapp_text {
       text-align: left;
-      width: 503px;
       @media screen and (min-width: 360px) and (max-width: 1024px) {
         text-align: center;
       }
