@@ -1182,9 +1182,10 @@ h3 {
     bottom: 0;
   }
 }
-@media only screen and (max-width: 825px) {
+@media screen and (min-width: 600px) and (max-width: 766px) {
   .mobileapp--banner .container .mobileapp_image {
-    left: -150px;
+    overflow: hidden;
+    left: -34px;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -1195,6 +1196,11 @@ h3 {
 .mobileapp--banner .container .morkup_iphone {
   display: block;
 }
+@media screen and (min-width: 600px) and (max-width: 766px) {
+  .mobileapp--banner .container .morkup_iphone {
+    width: 690px;
+  }
+}
 .mobileapp--banner .container .mobileapp_text {
   text-align: left;
 }
@@ -1203,7 +1209,7 @@ h3 {
     text-align: center;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
   .mobileapp--banner .container .mobileapp_text {
     padding-left: 15px;
     padding-right: 15px;

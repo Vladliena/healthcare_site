@@ -1008,8 +1008,9 @@ h3 {
       @media screen and (min-width: 360px) and (max-width: 1024px) {
         bottom: 0;
       }
-      @media only screen and (max-width: 825px) {
-        left: -150px;
+      @media screen and (min-width: 600px) and (max-width: 766px) {
+        overflow: hidden;
+        left: -34px;
       }
       @media only screen and (max-width: 600px) {
         display: none;
@@ -1018,6 +1019,9 @@ h3 {
 
     .morkup_iphone {
       display: block;
+      @media screen and (min-width: 600px) and (max-width: 766px){
+        width: 690px;
+      }
     }
 
     .mobileapp_text {
@@ -1025,7 +1029,7 @@ h3 {
       @media screen and (min-width: 360px) and (max-width: 1024px) {
         text-align: center;
       }
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 1024px) {
         padding-left: 15px;
         padding-right: 15px;
       }
