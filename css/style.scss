@@ -8,6 +8,7 @@
 @import "normalize.css";
 @import "owl.carousel.css";
 @import "owl.theme.default.css";
+@import "https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css";
 @import "https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Rubik:wght@500&family=Ubuntu&display=swap";
 @import "footer.css";
 @import "animate.css";
@@ -547,8 +548,8 @@ $p_color: rgba(153, 153, 153, 1);
         position: absolute;
         display: block;
         max-width: 230px;
-        top: 140px;
-        right: -25px;
+        top: 165px;
+        right: -10px;
         @media screen and (min-width: 360px) and (max-width: 500px) {
           display: none;
         }
@@ -733,6 +734,11 @@ $p_color: rgba(153, 153, 153, 1);
 
     a {
       @include button;
+      display: inline-block;
+      transition: 0.3s;
+      &:hover{
+        transform: scale(1.1);
+      }
 
       &::after {
         content: "";
@@ -945,6 +951,12 @@ h3 {
       .d_socials_icon {
         margin-right: 6px;
         margin-left: 6px;
+        display: inline-block;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
 
       .doctors_card_img {
@@ -957,6 +969,11 @@ h3 {
 
   .botton {
     @include button;
+    display: inline-block;
+    transition: 0.3s;
+    &:hover{
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -995,7 +1012,7 @@ h3 {
         bottom: 0;
       }
       @media only screen and (max-width: 825px) {
-        left: -100px;
+        left: -150px;
       }
       @media only screen and (max-width: 767px) {
         left: -70px;
@@ -1210,6 +1227,8 @@ h3 {
         line-height: 46px;
         color: #FFFFFF;
         margin-bottom: 40px;
+        z-index: 5;
+        position: relative;
         @media screen and (min-width: 360px) and (max-width: 565px) {
           font-size: 32px;
           line-height: 42px;
@@ -1226,16 +1245,19 @@ h3 {
         color: #40A3F8;
         text-decoration: none;
         border-radius: 5px;
+        display: inline-block;
+        transition: 0.3s;
+        &:hover{
+          transform: scale(1.1);
+        }
       }
     }
 
     .subscription_img {
       display: block;
-      width: 600px;
-      height: 452px;
       position: relative;
-      right: -69px;
       bottom: 55px;
+      z-index: 4;
       @media screen and (min-width: 360px) and (max-width: 835px) {
         display: none;
       }

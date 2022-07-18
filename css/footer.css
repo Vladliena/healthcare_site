@@ -61,10 +61,14 @@ footer .footer--bg .container .contacts .footer_socials {
   list-style: none;
 }
 footer .footer--bg .container .contacts .footer_socials img {
-  display: block;
   margin-right: 16px;
   height: 32px;
   width: 32px;
+  display: inline-block;
+  transition: 0.3s;
+}
+footer .footer--bg .container .contacts .footer_socials img:hover {
+  transform: scale(1.1);
 }
 @media screen and (max-width: 992px) {
   footer .footer--bg .container .contacts {
@@ -148,8 +152,12 @@ footer .footer--bg .container .footer_subscribe form .subscribe_footer_btn {
   font-size: 14px;
   line-height: 16px;
   color: #FFFFFF;
-  display: block;
   text-decoration: none;
+  display: block;
+  transition: 0.3s;
+}
+footer .footer--bg .container .footer_subscribe form .subscribe_footer_btn:hover {
+  transform: scale(1.1);
 }
 footer .footer--bg .line_footer {
   border-bottom: 1px solid;

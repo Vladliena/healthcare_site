@@ -1,6 +1,7 @@
 @import "normalize.css";
 @import "owl.carousel.css";
 @import "owl.theme.default.css";
+@import "https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css";
 @import "https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Rubik:wght@500&family=Ubuntu&display=swap";
 @import "footer.css";
 @import "animate.css";
@@ -696,8 +697,8 @@ span.icon-bar {
   position: absolute;
   display: block;
   max-width: 230px;
-  top: 140px;
-  right: -25px;
+  top: 165px;
+  right: -10px;
 }
 @media screen and (min-width: 360px) and (max-width: 500px) {
   .about_banner .container .doctor_photo .bubble1 {
@@ -885,6 +886,11 @@ span.icon-bar {
   letter-spacing: 0.02em;
   color: #FFFFFF;
   text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+.about_banner .about_text a:hover {
+  transform: scale(1.1);
 }
 .about_banner .about_text a::after {
   content: "";
@@ -1108,6 +1114,11 @@ h3 {
 .doctors--banner .container .doctors_card .d_socials_icon {
   margin-right: 6px;
   margin-left: 6px;
+  display: inline-block;
+  transition: 0.3s;
+}
+.doctors--banner .container .doctors_card .d_socials_icon:hover {
+  transform: scale(1.1);
 }
 .doctors--banner .container .doctors_card .doctors_card_img {
   margin-bottom: 17px;
@@ -1125,6 +1136,11 @@ h3 {
   letter-spacing: 0.02em;
   color: #FFFFFF;
   text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+.doctors--banner .botton:hover {
+  transform: scale(1.1);
 }
 
 /*mobileapp_banner*/
@@ -1173,7 +1189,7 @@ h3 {
 }
 @media only screen and (max-width: 825px) {
   .mobileapp--banner .container .mobileapp_image {
-    left: -100px;
+    left: -150px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -1398,6 +1414,8 @@ h3 {
   line-height: 46px;
   color: #FFFFFF;
   margin-bottom: 40px;
+  z-index: 5;
+  position: relative;
 }
 @media screen and (min-width: 360px) and (max-width: 565px) {
   .subscription--banner .container .subscription_title .subscription_h3 {
@@ -1415,14 +1433,17 @@ h3 {
   color: #40A3F8;
   text-decoration: none;
   border-radius: 5px;
+  display: inline-block;
+  transition: 0.3s;
+}
+.subscription--banner .container .subscription_title .subscription_btn:hover {
+  transform: scale(1.1);
 }
 .subscription--banner .container .subscription_img {
   display: block;
-  width: 600px;
-  height: 452px;
   position: relative;
-  right: -69px;
   bottom: 55px;
+  z-index: 4;
 }
 @media screen and (min-width: 360px) and (max-width: 835px) {
   .subscription--banner .container .subscription_img {
@@ -1430,4 +1451,4 @@ h3 {
   }
 }
 
-/*# sourceMappingURL=style_preprocessor.css.map */
+/*# sourceMappingURL=style.css.map */
